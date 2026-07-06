@@ -226,6 +226,7 @@ function showStep(step) {
 
 function togglePasswordVisibility() {
   const isPassword = newPasswordInput.type === "password";
+  const icon = document.getElementById("togglePasswordIcon");
 
   newPasswordInput.type = isPassword ? "text" : "password";
   confirmPasswordInput.type = isPassword ? "text" : "password";
@@ -235,7 +236,19 @@ function togglePasswordVisibility() {
     isPassword ? "Hide password" : "Show password",
   );
 
-  togglePasswordButton.textContent = isPassword ? "🙈" : "👁";
+  if (!icon) return;
+
+  icon.innerHTML = isPassword
+    ? `
+      <path d="M3 3L21 21"/>
+      <path d="M10.6 10.6A2 2 0 0013.4 13.4"/>
+      <path d="M9.9 5.1A10.7 10.7 0 0112 5c6.5 0 10 7 10 7a17.8 17.8 0 01-3.2 4.2"/>
+      <path d="M6.5 6.5C3.8 8.5 2 12 2 12s3.5 7 10 7a9.8 9.8 0 005.5-1.7"/>
+    `
+    : `
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    `;
 }
 
 async function submitForgotPassword(payload) {
