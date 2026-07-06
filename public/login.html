@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veritas AI | Sign In</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/logo_without_bg.png"
+    />
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="illustration-panel">
+        <img
+          class="illustration-panel__robot"
+          src="assets/images/Robot_veritas.png"
+          alt="Veritas AI illustration"
+        />
+
+        <div class="illustration-panel__content">
+          <h1 class="illustration-panel__title">
+            Verify news with evidence-driven AI.
+          </h1>
+          <p class="illustration-panel__text">
+            Use AI-assisted evidence retrieval to evaluate article credibility,
+            inspect key claims, and review supporting sources.
+          </p>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-card">
+          <header class="form-card__header">
+            <img
+              class="form-card__logo"
+              src="assets/images/logo_without_bg.png"
+              alt="Veritas AI"
+            />
+          </header>
+
+          <h2 class="form-card__title">Welcome Back</h2>
+          <p class="form-card__subtitle">
+            Sign in to continue your verification workspace.
+          </p>
+
+          <form id="loginForm" class="login-form" novalidate>
+            <div class="form-field" id="identifierField">
+              <span class="form-field__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </span>
+              <label for="identifier" class="visually-hidden">Email</label>
+              <input
+                type="text"
+                id="identifier"
+                name="identifier"
+                class="form-field__input"
+                placeholder="Email address"
+                autocomplete="email"
+              />
+            </div>
+            <p class="form-field__error" id="identifierError"></p>
+
+            <div class="form-field" id="passwordField">
+              <span class="form-field__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="11" width="16" height="9" rx="2" />
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                </svg>
+              </span>
+              <label for="password" class="visually-hidden">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-field__input"
+                placeholder="Password"
+                autocomplete="current-password"
+              />
+              <button
+                type="button"
+                class="form-field__toggle"
+                id="togglePassword"
+                aria-label="Show password"
+              >
+                <svg id="togglePasswordIcon" viewBox="0 0 24 24" fill="none">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+            <p class="form-field__error" id="passwordError"></p>
+
+            <div class="form-footer-row">
+              <label class="form-checkbox">
+                <input type="checkbox" id="rememberMe" name="rememberMe" />
+                <span>Remember me</span>
+              </label>
+              <a href="forgot_password.html" class="form-link form-link--small">
+                Forgot password?
+              </a>
+            </div>
+
+            <p class="form-message" id="formMessage" role="alert"></p>
+
+            <button type="submit" class="btn-primary" id="submitButton">
+              <span class="btn-primary__label">Sign In</span>
+              <span class="btn-primary__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <p class="form-card__footer">
+            Don't have an account?
+            <a href="register.html" class="form-link">Create Account</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# PHP dependencies
+vendor/
+
+# Composer cache/logs
+composer.phar
+
+# Python environment files inside AI service
+service_ai/.env
+service_ai/.env.*
+!service_ai/.env.example
+
+# Python virtual environments
+service_ai/.venv/
+service_ai/venv/
+service_ai/env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Test/cache artifacts
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/

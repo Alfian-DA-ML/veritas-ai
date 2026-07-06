@@ -1,0 +1,21 @@
+{
+    "name": "alfian/veritas-ai",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alfian\\VeritasAi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alfian-DA-ML",
+            "email": "adipratamaalfian45@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "firebase/php-jwt": "^7.1",
+        "phpmailer/phpmailer": "^7.1"
+    }
+}

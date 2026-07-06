@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veritas AI | Create Account</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/logo_without_bg.png"
+    />
+    <link rel="stylesheet" href="assets/css/register.css" />
+  </head>
+  <body>
+    <main class="register-page">
+      <section class="illustration-panel">
+        <img
+          class="illustration-panel__robot"
+          src="assets/images/Robot_veritas.png"
+          alt="Veritas AI illustration"
+        />
+
+        <div class="illustration-panel__content">
+          <h1 class="illustration-panel__title">
+            Start verifying news with evidence-driven AI.
+          </h1>
+          <p class="illustration-panel__text">
+            Create your workspace to analyze article credibility, inspect key
+            claims, and review supporting evidence from retrieved sources.
+          </p>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-card">
+          <header class="form-card__header">
+            <img
+              class="form-card__logo"
+              src="assets/images/logo_without_bg.png"
+              alt="Veritas AI"
+            />
+          </header>
+
+          <h2 class="form-card__title">Create Account</h2>
+          <p class="form-card__subtitle">
+            Join your AI-assisted news verification workspace.
+          </p>
+
+          <form id="registerForm" class="register-form" novalidate>
+            <div class="form-field" id="usernameField">
+              <span class="form-field__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </span>
+              <label for="username" class="visually-hidden">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-field__input"
+                placeholder="Username"
+                autocomplete="username"
+              />
+            </div>
+            <p class="form-field__error" id="usernameError"></p>
+
+            <div class="form-field" id="emailField">
+              <span class="form-field__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </span>
+              <label for="email" class="visually-hidden">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-field__input"
+                placeholder="Email address"
+                autocomplete="email"
+              />
+            </div>
+            <p class="form-field__error" id="emailError"></p>
+
+            <div class="form-field" id="passwordField">
+              <span class="form-field__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="11" width="16" height="9" rx="2" />
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                </svg>
+              </span>
+              <label for="password" class="visually-hidden">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-field__input"
+                placeholder="Password"
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="form-field__toggle"
+                id="togglePassword"
+                aria-label="Show password"
+              >
+                <svg id="togglePasswordIcon" viewBox="0 0 24 24" fill="none">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="strength-meter" id="strengthMeter" aria-hidden="true">
+              <span class="strength-meter__bar"></span>
+              <span class="strength-meter__bar"></span>
+              <span class="strength-meter__bar"></span>
+              <span class="strength-meter__bar"></span>
+              <span class="strength-meter__bar"></span>
+            </div>
+            <p class="form-field__error" id="passwordError"></p>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="terms" name="terms" />
+              <label for="terms">
+                I agree to the
+                <a href="terms.html" class="form-link"
+                  >Terms &amp; Privacy Policy</a
+                >
+              </label>
+            </div>
+            <p class="form-field__error" id="termsError"></p>
+
+            <p class="form-message" id="formMessage" role="alert"></p>
+
+            <button type="submit" class="btn-primary" id="submitButton">
+              <span class="btn-primary__label">Create Account</span>
+              <span class="btn-primary__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <p class="form-card__footer">
+            Already have an account?
+            <a href="login.html" class="form-link">Sign In</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>

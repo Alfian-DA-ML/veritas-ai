@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veritas AI | Terms & Privacy Policy</title>
+  <link rel="icon" type="image/png" href="assets/images/logo_without_bg.png">
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-bg: #f0f4fb;
+      --color-card: #ffffff;
+      --color-text: #0f172a;
+      --color-text-muted: #64748b;
+      --color-border: #e2e8f0;
+      --radius-lg: 24px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-outer: 0 2px 4px rgba(15, 23, 42, 0.04), 0 24px 64px -16px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(15, 23, 42, 0.04);
+      --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: radial-gradient(circle at 20% 30%, #dde8fc 0%, var(--color-bg) 55%);
+      color: var(--color-text);
+      padding: 40px 20px;
+    }
+
+    /* ── Page wrapper ── */
+    .terms-page {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Back button ── */
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 9px 18px;
+      background: var(--color-card);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-back:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px -4px rgba(37, 99, 235, 0.20);
+    }
+
+    .btn-back__arrow {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    /* ── Main card ── */
+    .terms-card {
+      background: var(--color-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-outer);
+      overflow: hidden;
+    }
+
+    /* ── Card header ── */
+    .terms-card__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 36px 48px 32px;
+      border-bottom: 1px solid var(--color-border);
+      background: linear-gradient(145deg, #eef3fd 0%, #f7f9ff 100%);
+    }
+
+    .terms-card__logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .terms-card__heading {
+      flex: 1;
+    }
+
+    .terms-card__title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 2px;
+      color: var(--color-text);
+    }
+
+    .terms-card__meta {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    /* ── Card body ── */
+    .terms-card__body {
+      padding: 40px 48px 48px;
+    }
+
+    /* ── Section ── */
+    .terms-section {
+      margin-bottom: 36px;
+    }
+
+    .terms-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .terms-section__title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .terms-section__body {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .terms-section__body p {
+      margin: 0 0 10px;
+    }
+
+    .terms-section__body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section__body ul {
+      margin: 8px 0 10px;
+      padding-left: 20px;
+    }
+
+    .terms-section__body ul li {
+      margin-bottom: 6px;
+    }
+
+    .terms-section__body a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .terms-section__body a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Divider ── */
+    .terms-divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 0 0 36px;
+    }
+
+    /* ── Card footer ── */
+    .terms-card__footer {
+      padding: 24px 48px;
+      border-top: 1px solid var(--color-border);
+      background: #fafbfd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .terms-card__footer-text {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      background: var(--color-primary);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.48);
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px -6px rgba(37, 99, 235, 0.52);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      body { padding: 24px 12px; }
+
+      .terms-card__header {
+        padding: 28px 24px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .terms-card__body { padding: 28px 24px 36px; }
+
+      .terms-card__footer {
+        padding: 20px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-primary { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terms-page">
+
+    <!-- Back button -->
+    <a href="register.html" class="btn-back">
+      <span class="btn-back__arrow">&#8592;</span>
+      Back to Register
+    </a>
+
+    <!-- Main card -->
+    <article class="terms-card">
+
+      <!-- Header -->
+      <header class="terms-card__header">
+        <img class="terms-card__logo" src="assets/images/logo_without_bg.png" alt="Veritas AI">
+        <div class="terms-card__heading">
+          <h1 class="terms-card__title">Terms &amp; Privacy Policy</h1>
+          <p class="terms-card__meta">Last updated: June 2025 &nbsp;·&nbsp; Veritas AI</p>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="terms-card__body">
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">1. Acceptance of Terms</h2>
+          <div class="terms-section__body">
+            <p>By creating an account and using Veritas AI, you agree to be bound by these Terms & Privacy Policy. If you do not agree, please do not use this service.</p>
+            <p>These terms apply to all users of the platform, including visitors, registered users, and contributors.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">2. Description of Service</h2>
+          <div class="terms-section__body">
+            <p>Veritas AI is a news credibility verification platform powered by artificial intelligence. The service is provided for informational and educational purposes only. Results generated by the AI should not be taken as absolute fact and are intended to assist, not replace, human judgment.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">3. User Accounts</h2>
+          <div class="terms-section__body">
+            <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to:</p>
+            <ul>
+              <li>Provide accurate and complete registration information.</li>
+              <li>Keep your password secure and not share it with others.</li>
+              <li>Notify us immediately of any unauthorized use of your account.</li>
+              <li>Not create accounts for malicious or fraudulent purposes.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">4. Acceptable Use</h2>
+          <div class="terms-section__body">
+            <p>You agree not to use Veritas AI to:</p>
+            <ul>
+              <li>Submit harmful, illegal, or misleading content.</li>
+              <li>Attempt to reverse-engineer, scrape, or exploit the platform.</li>
+              <li>Impersonate any person or entity.</li>
+              <li>Interfere with the security or integrity of the service.</li>
+            </ul>
+            <p>We reserve the right to suspend or terminate accounts that violate these terms.</p>
+          </div>
+        </section>
+
+        <hr class="terms-divider">
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">5. Data We Collect</h2>
+          <div class="terms-section__body">
+            <p>When you register and use Veritas AI, we may collect:</p>
+            <ul>
+              <li><strong>Account information:</strong> username, email address, and hashed password.</li>
+              <li><strong>Usage data:</strong> articles or URLs submitted for verification, timestamps, and interaction logs.</li>
+              <li><strong>Technical data:</strong> IP address, browser type, and device information for security purposes.</li>
+            </ul>
+            <p>We do not sell your personal data to third parties.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">6. How We Use Your Data</h2>
+          <div class="terms-section__body">
+            <p>Your data is used solely to:</p>
+            <ul>
+              <li>Operate and improve the Veritas AI platform.</li>
+              <li>Authenticate your account and keep it secure.</li>
+              <li>Analyze aggregated, anonymized usage patterns to enhance AI accuracy.</li>
+              <li>Send service-related notifications when necessary.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">7. Data Security</h2>
+          <div class="terms-section__body">
+            <p>We implement industry-standard security measures including password hashing, HTTPS encryption, and access controls to protect your data. However, no system is completely secure and we cannot guarantee absolute security.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">8. Data Retention &amp; Deletion</h2>
+          <div class="terms-section__body">
+            <p>Your account data is retained for as long as your account is active. You may request deletion of your account and associated data at any time by contacting us. We will process your request within a reasonable timeframe.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">9. Changes to These Terms</h2>
+          <div class="terms-section__body">
+            <p>We may update these Terms & Privacy Policy from time to time. Significant changes will be communicated via the platform. Continued use of Veritas AI after changes are posted constitutes your acceptance of the revised terms.</p>
+          </div>
+        </section>
+
+        <section class="terms-section">
+          <h2 class="terms-section__title">10. Contact</h2>
+          <div class="terms-section__body">
+            <p>If you have questions about these terms or your data, please reach out through the platform's support channel or contact the development team directly.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="terms-card__footer">
+        <p class="terms-card__footer-text">By registering, you confirm that you have read and agree to these terms.</p>
+        <a href="register.html" class="btn-primary">
+          &#8592; Back to Register
+        </a>
+      </footer>
+
+    </article>
+  </div>
+</body>
+</html>
