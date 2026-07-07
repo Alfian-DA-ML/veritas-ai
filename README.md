@@ -4,8 +4,6 @@
 
 The system is designed as a verification assistant, not an absolute truth detector. It analyzes a submitted news URL, extracts key claims, retrieves related evidence from external sources, and generates a structured verification report containing a verdict, confidence score, reasoning summary, key claims, and supporting evidence.
 
-![Veritas AI Dashboard](public/assets/readme/verification-report.png)
-
 ---
 
 ## Live Demo
